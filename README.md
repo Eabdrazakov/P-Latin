@@ -12,3 +12,7 @@ Test: "It will move all of the first consecutive consonants to the end and add "
 Code: pLatin("code");
 Expected Output: "edocay"
 
+Test: "The first consonants include "qu", move the "q" and the "u" and add "ay" at the end.
+Code: pLatin("quick");
+Expected Output: "ickquya"
+
