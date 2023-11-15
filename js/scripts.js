@@ -33,10 +33,19 @@ function pLatin(text) {
 
 }
 
-console.log(pLatin("quick"))
-console.log(pLatin("code"))
-console.log(pLatin("a"))
+//UI logic
 
+function handleFormSubmission(event) {
+    event.preventDefault();
+    const text = document.getElementById("text").value;
+    const pigLatin = pLatin(text);
+
+    document.getElementById("expect").innerText = pigLatin;
+}
+
+window.addEventListener("load", function () {
+    document.querySelector("form").addEventListener("submit", handleFormSubmission);
+});
 
 // const vowels = ["a", "e", "i", "o", "u"];
 // const special = "qu"
